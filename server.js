@@ -16,7 +16,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json()); //To parse and use JSON data
 
-//Browser page display
+//Browser page test display
 app.get("/", (req, res) => {
   res.send(`API is running`);
 });
