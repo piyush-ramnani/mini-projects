@@ -16,28 +16,41 @@ Please finish the challenge and send it to us by 17th Dec. Put your code on GitH
 
 ---
 
-# STEPS:
+# Required
 
-1. Make a collection in MongoDB
-2. Add user data {age, BMI}
-3. Create an express server for BMI calculation API
-4. function to calculate BMI (KG/m^2);
-   1 ft = 1/3.281 m
-   3 categories (m, ft, inches)
-5. Input validation - check if in Number
-6. Calculate and store the value and category in the DB
-7. User can access all previous calculations, make changes and update it in the table
-8. Error handling.
-
-# APIs:
-
-- Make an entry in the DB : POST
-- Access all entries : GET
-- Update entries : PUT
+- NodeJS
+- ExpressJS
+- Mongoose
+- nodemon
+- POSTMAN
 
 ---
 
-[db.js]
+# APIs:
 
-- connected to DB via mongoose
-- URI as env variable
+- Make an entry in the DB
+  POST ("/calculate") | { name, email, height, weight, age }
+
+- Access all entries
+  GET ("/get-all") | {}
+
+- Update entries
+  PUT ("/update") | { email, height, weight }
+
+- Delete an entry
+  DELETE ("/delete") | { email }
+
+---
+
+# Environment Variables in use
+
+- PORT: XXXX
+- MONGO_URI: XXXXXXXXXXXXXXXXXXX
+
+---
+
+# Start application
+
+- npm run start
+
+---
